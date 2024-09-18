@@ -1,0 +1,402 @@
+
+
+/* breackpoint 1361px*/
+@media (max-width:1361px) {
+
+    .padre__remeras {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: $porciento;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+    
+        .contenedor__card {
+    
+            margin: $ancho-vh /2;
+            width: $ancho-vh *40;
+        
+        }
+    
+        .contenedor__img {
+            object-fit: cover;
+            height: 45vh;
+            width: $porciento;
+            overflow: hidden;
+            border-radius: 5px ;
+        }
+
+    }
+}
+
+
+
+/* breackpoint 768px*/
+@media (max-width:780px) {
+
+    /*barra de navegacion*/
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px;
+    
+        .contenedor__logo {
+            display: flex;
+            align-items: center;
+            height: $porciento;
+        
+            
+    
+            .texto__logo {
+    
+                color: $color-blanco;
+                font-family: Helvetica, sans-serif;
+                font-size: 1.5rem;
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-left: 10vh;
+    
+            }
+    
+        }
+    
+    }
+
+    .contenedor__nav {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: $porciento;
+        overflow: auto;
+    }
+
+    .contenedor__nav label {
+        display: flex;
+    }
+
+    .navegacion__nav {
+
+        display: none;
+    }
+
+    #check__menu:checked~.navegacion__nav {
+
+        background-color: #f18705;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    /*titulo contacto*/
+
+    form {
+
+        border-radius:  3px ;
+        background-color: $color-naranja;
+        margin-bottom: 10vh;
+        
+        .padre__titulo{
+
+            .titulo__tienda{
+
+                font-size: 1.5rem;
+            }
+        }
+
+        .input__form{
+    
+            padding: 3vh;
+            
+        }
+     
+    }
+    
+
+    /* pagina shop */
+
+    .padre__remeras {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: $porciento;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+    
+        .contenedor__card {
+    
+            margin: $ancho-vh;
+            width: $ancho-vh *35;
+        
+        }
+    
+        .contenedor__img {
+            object-fit: cover;
+            height: 40vh;
+            width: $porciento;
+            overflow: hidden;
+            border-radius: 3px ;
+        }
+        .descripcion {
+            
+            font-size: 1rem;
+            margin: 0;
+
+            .boton__añadir{
+                font-size: 1rem;
+            }
+        
+        }
+       
+    }
+
+
+
+    /* pagina nosotros*/
+
+    .padre__nosotros {
+
+        display: flex;
+        flex-direction: column;
+        
+
+        .img__nosotros {
+            width: $porciento;
+            height: 40vh;
+        }
+
+        .texto__nosotros {
+            font-size: 1.2rem;
+           
+
+        }
+
+    }
+
+    /*comienzo diseños*/
+
+    .contenedor__banana {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $pixel;
+        width: $porciento - 40;
+        overflow: auto;
+        text-align: center;
+        
+
+        .img__banana {
+            height: 20vh;
+            width: 20vh;
+            margin: 0;
+            
+        }
+
+        .texto__banana {
+            font-size: 1.5rem;
+            margin-top: 0;
+           
+        }
+
+    }
+
+    .contenedor__ojo {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $pixel;
+        width: $porciento - 40;
+        overflow: auto;
+        text-align: center;
+
+
+
+        .img__ojo {
+            height: 20vh;
+            width: 20vh;
+            margin: 0;
+        }
+
+        .texto__ojo {
+            font-size: 1.5rem;
+            margin-top: 0;
+
+        }
+
+    }
+
+    .contenedor__cajon {
+        
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $pixel;
+        width: $porciento - 40;
+        overflow: auto;
+        text-align: center;
+
+
+
+        .img__cajon {
+
+            height: 20vh;
+            width: 20vh;
+            margin: 0;
+        }
+
+        .texto__cajon {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+
+
+
+
+    }
+
+
+
+    /*comienzo nav footer*/
+
+    .contenedor__nav__footer {
+
+        display: none;
+    }
+
+    .nav__footer {
+        display: grid;
+        grid-template-columns: 1, 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "email"
+            "contacto"
+            "redes";
+
+    }
+
+    .contenedor__mailcontacto {
+
+        grid-area: contacto;
+        font-family: "BebasNeue-Regular";
+        color: $color-blanco;
+        margin: 20px;
+        width: 100%;
+    }
+
+    .contenedor__emailoff {
+
+        font-family: "BebasNeue-Regular";
+        color: $color-blanco;
+        margin: 20px;
+        width: 450px;
+
+    }
+
+
+
+}
+
+
+/* breackpoint 576px*/
+@media (max-width:655px) {
+    /*pagina shop*/
+    .padre__remeras {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: $porciento;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+    
+        .contenedor__card {
+    
+            margin: $ancho-vh;
+            width: $ancho-vh *25;
+        
+        }
+    
+        .contenedor__img {
+            object-fit: cover;
+            height: 30vh;
+            width: $porciento;
+            overflow: hidden;
+            border-radius: 3px ;
+        }
+
+       
+    }
+
+    /*retoques footer*/
+    .contenedor__emailoff {
+
+        font-family: "BebasNeue-Regular";
+        color: $color-blanco;
+        margin: 20px;
+        width: 300px;
+
+    }
+
+    #input-mail-footer {
+
+        width: 300px;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid $color-blanco;
+        border-radius: 5px;
+        background-color: $color-blanco;
+        font-size: 16px;
+        color: #333;
+    }
+
+
+}
+
+/* breackpoint 576px*/
+@media (max-width:480px) {
+
+        /*pagina shop*/
+        .padre__remeras {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: $porciento;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+        
+            .contenedor__card {
+        
+                margin: $ancho-vh;
+                width: $ancho-vh *17;
+            
+            }
+        
+            .contenedor__img {
+                object-fit: cover;
+                height: 17vh;
+                width: $porciento;
+                overflow: hidden;
+                border-radius: 3px ;
+            }
+    
+           
+        }
+
+
+}

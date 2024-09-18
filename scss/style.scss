@@ -1,0 +1,469 @@
+@import"./partials/reset";
+
+@import"./partials/variables";
+
+/*inicio header*/
+
+header {
+    width: $porciento;
+    background-color: $color-negro;
+    height: auto;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px;
+    
+
+    .contenedor__logo {
+        display: flex;
+        align-items: center;
+        height: $porciento;
+       
+    
+        
+
+        .texto__logo {
+
+            @include basico($fuente2,$color-blanco ,3rem );
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-left: 10vh;
+
+        }
+
+    }
+
+}
+
+.navegacion__nav {
+
+    display: flex;
+    flex-direction: row;
+    height: $porciento;
+    align-items: center;
+    justify-content: flex-start;
+    
+    .nav__item {
+        margin-left: 1vh;
+        margin-top: $altura-vh*3;
+    }
+
+    a {
+
+        @include basico($fuente,$color-blanco ,2rem );
+        text-decoration: none;
+    }
+
+
+}
+
+
+
+
+/* menu mobile */
+
+#check__menu,
+.contenedor__nav label {
+
+    display: none;
+}
+
+
+/* pseudoclases navbar */
+
+.nav__item :hover {
+
+    border-top: 3px solid $color-naranja;
+    padding-top: 10px;
+
+
+}
+
+/* Fin header */
+
+.padre__titulo {
+
+    display: flex;
+    width: $porciento;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+
+    .titulo__tienda {
+
+        
+        @include basico($fuente,$color-negro ,2rem );
+        margin-top: 10px;
+    
+    }
+
+
+}
+
+/*contenido de las paginas*/
+
+
+.container__banner {
+
+    padding: 0%;
+    margin: 0;
+    margin-bottom: 20vh;
+}
+
+/*tienda*/
+
+
+
+
+
+.padre__remeras {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: $porciento;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+
+    .contenedor__card {
+
+        margin: $ancho-vh /2;
+        width: $ancho-vh *50;
+    
+    }
+
+    .contenedor__img {
+        object-fit: cover;
+        height: 60vh;
+        width: $porciento;
+        overflow: hidden;
+        border-radius: 5px ;
+    }
+    .remera {
+
+        font-weight: 600;
+        width: $porciento;
+        height: $porciento;
+        border: 1px solid;
+        object-fit: cover;
+        transition: transform 0.2s;
+    }
+    .descripcion {
+
+        @include basico($fuente,$color-blanco ,1.5rem );
+        font-style: italic;
+        display: flex;
+        background-color: $color-negro;
+        margin: 0;
+        border: 1px solid #000;
+        flex-direction: column;
+        align-items: center;
+        width: $porciento;
+        
+    }
+    .boton__añadir {
+        width: $porciento;
+        font-family: $fuente;
+        font-size: large;
+    }
+
+}
+
+
+.contenedor__img :hover {
+
+    transform: scale(1.3);
+
+}
+
+.boton__añadir :hover {
+    background-color: $color-blanco;
+}
+
+/* pagina nosotros*/
+
+
+   
+
+
+.padre__nosotros {
+
+    background-color: $color-negro;
+    border: $color-naranja 3px solid;
+    margin-bottom: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: $porciento - 40;
+
+    
+
+    .img__nosotros {
+        width: 100%;
+        height: 60vh;
+        padding: 5vh;
+        padding-bottom: 0;
+    }
+
+    .texto__nosotros {
+        color: $color-blanco;
+        padding: 2vh;
+        grid-area: textonos;
+        font-size: 1.5rem;
+        font-family: $fuente;
+
+    }
+
+}
+
+
+/*pagina diseños*/
+.contenedor__diseños {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor__banana {
+
+    background-color: $color-negro;
+    border:$color-naranja 3px solid;
+    width: $porciento - 5;
+    margin-bottom: $altura-vh;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "banana textobanana"
+
+}
+
+.img__banana{
+    grid-area: banana;
+    height: 45vh;
+    width: 45vh;
+}
+
+.texto__banana {
+    color: $color-blanco;
+    grid-area: textobanana;
+    font-size: 2rem;
+    font-family: $fuente;
+    margin-top: $altura-vh *15;
+
+}
+
+.contenedor__cajon {
+
+    @extend .contenedor__banana;
+    grid-template-areas:
+    "cajon textocajon"
+    
+
+}
+
+.img__cajon{
+  
+    @extend .img__banana;
+}
+
+.texto__cajon {
+
+    @extend .texto__banana;
+    grid-area: textocajon;
+
+}
+
+.contenedor__ojo {
+    
+    @extend .contenedor__banana;
+    grid-template-areas:
+    "textoojo ojo";
+
+}
+
+.img__ojo{
+    @extend .img__banana;
+}
+
+.texto__ojo {
+    @extend .texto__banana;
+    grid-area: textoojo;
+   
+}
+
+
+
+/* pagina formulario */
+
+
+
+form {
+
+    border-radius:  3px ;
+    background-color: $color-naranja;
+    margin-bottom: 15vh;
+    .input__form{
+
+        padding: 2vh;
+        
+        label{
+            font-family: $fuente;
+            font-size: $fuente-rem*1.5;
+        }
+        input {
+            font-family: $fuente;
+        }
+        textarea {
+            font-family: $fuente;
+        }
+    }
+ 
+}
+
+
+
+
+.btn-primary {
+
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #000000;
+    --bs-btn-border-color: #232323;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #232323;
+    --bs-btn-hover-border-color: #000;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #232323;
+    --bs-btn-active-border-color: #232323;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #232323;
+    --bs-btn-disabled-border-color: #232323;
+}
+
+/*footer*/
+
+footer {
+
+    background-color: $color-negro;
+
+
+}
+
+footer a {
+
+    color: $color-blanco;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+
+}
+
+.nav__footer {
+    display: grid;
+    margin-top: 5vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "menuf email contacto"
+        "menuf email redes";
+
+        .mf1 {
+
+            margin-left: 30px;
+        }
+
+        .contenedor__nav__footer {
+
+            grid-area: menuf;
+            font-family: $fuente;
+            color: $color-blanco;
+            margin: 20px;
+        
+        }
+        .contenedor__mailcontacto {
+
+            grid-area: contacto;
+            font-family: $fuente;
+            color: $color-blanco;
+            margin: 20px;
+            font-size: 1.5rem;
+        }
+        .contenedor__emailoff {
+
+            font-family: $fuente;
+            color: $color-blanco;
+            margin-top: 20px;
+        
+        }
+
+        .contenedor__redes__footer {
+
+            grid-area: redes;
+            margin-left: 10px;
+           
+        
+        }
+
+}
+
+#input-mail-footer  {
+
+    width: 330px ;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    color: #333;
+    
+}
+
+/*error 404*/
+.body__error{
+    
+    background-color: #232323;
+
+    .titulo__error{
+    
+        color: $color-naranja;
+        font-family: $fuente;
+        margin: 5vh;
+        font-size: 4rem;
+    
+    }
+    .parrafo__error{
+        color: $color-naranja;
+        font-family: $fuente;
+        margin: 5vh;
+        font-size: 2rem;
+
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 5vh;
+        color: $color-naranja
+    }
+
+}
+
+
+
+/*queries*/
+
+
+@import"./partials/queries";
+
+
+
